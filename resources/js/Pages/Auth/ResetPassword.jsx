@@ -23,16 +23,17 @@ export default function ResetPassword({ token, email }) {
 
     return (
         <GuestLayout>
-            <Head title="Reset Password" />
+            <Head title="Resetar Senha" />
 
             <form onSubmit={submit}>
                 <div>
-                    <InputLabel htmlFor="email" value="Email" />
+                    <InputLabel htmlFor="email" value="E-mail" />
 
                     <TextInput
                         id="email"
                         type="email"
                         name="email"
+                        placeholder="Digite seu e-mail"
                         value={data.email}
                         className="mt-1 block w-full"
                         autoComplete="username"
@@ -43,12 +44,13 @@ export default function ResetPassword({ token, email }) {
                 </div>
 
                 <div className="mt-4">
-                    <InputLabel htmlFor="password" value="Password" />
+                    <InputLabel htmlFor="password" value="Senha" />
 
                     <TextInput
                         id="password"
                         type="password"
                         name="password"
+                        placeholder="Digite sua senha"
                         value={data.password}
                         className="mt-1 block w-full"
                         autoComplete="new-password"
@@ -62,13 +64,14 @@ export default function ResetPassword({ token, email }) {
                 <div className="mt-4">
                     <InputLabel
                         htmlFor="password_confirmation"
-                        value="Confirm Password"
+                        value="Confirme sua Senha"
                     />
 
                     <TextInput
                         type="password"
                         id="password_confirmation"
                         name="password_confirmation"
+                        placeholder="Confirme sua senha"
                         value={data.password_confirmation}
                         className="mt-1 block w-full"
                         autoComplete="new-password"
@@ -85,7 +88,7 @@ export default function ResetPassword({ token, email }) {
 
                 <div className="mt-4 flex items-center justify-end">
                     <PrimaryButton className="ms-4" disabled={processing}>
-                        Reset Password
+                        Resetar Senha
                     </PrimaryButton>
                 </div>
             </form>
