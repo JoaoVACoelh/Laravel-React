@@ -36,5 +36,11 @@ class UserSeeder extends Seeder
             ['name' => 'Test User 4','email' => 'test4@example.com',
             'password' => '123456#A']
         );
+        
+        User::firstOrCreate(
+            ['email' => 'test5@example.com'],
+            ['name' => 'Test User 5','email' => 'test5@example.com',
+            'password' => '123456#A']
+        );
     }
 }
